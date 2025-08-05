@@ -1,0 +1,18 @@
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+title: "Wenzhan Li"
+email: liwenzhan00@gmail.com
+description: "Hello, I'm Wenzhan Li."
+url: "https://li-wenzhan.github.io"
+baseurl: ""
+github_username: li-wenzhan
+
+nav:
+  - title: "Github"
+    url: "https://github.com/li-wenzhan"
+  - title: "Google Scholar"
+    url: "https://scholar.google.com.hk/citations?hl=zh-CN&user=gnFueV8AAAAJ"
+  # - title: "Blog"
+  #   url: "/blog"
