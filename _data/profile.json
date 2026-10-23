@@ -1,0 +1,226 @@
+{
+  "name": "Wenzhan Li",
+  "url": "https://li-wenzhan.github.io/",
+  "email": "liwenzhan00@gmail.com",
+  "github": "https://github.com/li-wenzhan",
+  "updated": "2026-10-23",
+  "updatedLabel": "October 2026",
+  "location": "Shenzhen, China",
+  "role": "Ph.D. student in Artificial Intelligence",
+  "cv": "assets/documents/Wenzhan_Li_CV.pdf",
+  "cvDate": "September 2026",
+  "portrait": "assets/images/portrait.png",
+  "intro": "I study how robots can learn from experience, reason with world models, and adapt to a changing world.",
+  "bio": "I am a Ph.D. student at Sun Yat-sen University, advised by Prof. Yulan Guo, with joint doctoral training at Shenzhen Loop Area Institute (SLAI). My research lies at the intersection of embodied AI, world-action models, and robot learning.",
+  "background": "Previously, I worked on robotics algorithms at RoboSense and received my master's degree from Tsinghua University. I enjoy bringing research ideas through method design, code, and experiments to working robotic systems.",
+  "contact": "I welcome conversations about robot learning, research collaborations, and research internships. If our interests overlap, I would be happy to connect.",
+  "news": [
+    {
+      "date": "2026-09",
+      "label": "Sep 2026",
+      "text": "Started my Ph.D. at Sun Yat-sen University, with joint training at SLAI.",
+      "tag": "A new chapter"
+    },
+    {
+      "date": "2026",
+      "label": "2026",
+      "text": "MERL, PAWN, and ComSim were accepted to CoRL 2026.",
+      "tag": "Research",
+      "anchor": "#publications"
+    }
+  ],
+  "research": [
+    {
+      "number": "01",
+      "title": "World models that support action",
+      "text": "Learning representations of the world that make robotic action learning more useful and efficient.",
+      "note": "World–action representation learning"
+    },
+    {
+      "number": "02",
+      "title": "Adaptation through experience",
+      "text": "Studying how world-action models can improve through interaction, post-training, and the reuse of experience.",
+      "note": "Policy refinement & experience reuse"
+    },
+    {
+      "number": "03",
+      "title": "Learning across domains",
+      "text": "Connecting simulation with real-world data and learning transferable representations across environments.",
+      "note": "Sim-to-real & cross-domain learning"
+    }
+  ],
+  "publications": [
+    {
+      "id": "merl",
+      "short": "MERL",
+      "title": "Trust-Calibrated VLA Policy Post-Training with Evolving Imagination",
+      "authors": [
+        "Wenzhan Li",
+        "Yiran Qin",
+        "Heng Zhou",
+        "Huirui Wang",
+        "Yulan Guo",
+        "Ruimao Zhang"
+      ],
+      "equalAuthors": [],
+      "role": "First author · Project lead",
+      "venue": "CoRL 2026",
+      "status": "Accepted",
+      "year": 2026,
+      "category": "robot",
+      "summary": "Calibrating when and how a robot policy should trust an evolving world model during post-training.",
+      "contribution": "Led method design, research codebase development, experiments, and manuscript writing.",
+      "image": "assets/images/merl.webp",
+      "imageAlt": "A PiPER robot completing a block-to-box manipulation task in a MERL physical rollout.",
+      "video": "assets/video/merl-block.mp4",
+      "videoNote": "Physical rollout · 2× source playback",
+      "pdf": "assets/documents/merl.pdf",
+      "project": "https://merl-project.github.io/",
+      "code": "https://github.com/li-wenzhan/MERL",
+      "arxiv": "https://arxiv.org/abs/2610.16517",
+      "bibtex": "@misc{li2026merl,\n  title = {Trust-Calibrated VLA Policy Post-Training with Evolving Imagination},\n  author = {Li, Wenzhan and Qin, Yiran and Zhou, Heng and Wang, Huirui and Guo, Yulan and Zhang, Ruimao},\n  year = {2026},\n  eprint = {2610.16517},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.RO},\n  url = {https://arxiv.org/abs/2610.16517}\n}"
+    },
+    {
+      "id": "pawn",
+      "short": "PAWN",
+      "title": "PAWN: Preference-Aware Semantic NFT for Online Reinforcement Learning of Flow-based VLAs",
+      "authors": [
+        "Haomin Zuo",
+        "Wenzhan Li",
+        "Ruimao Zhang",
+        "Yulan Guo"
+      ],
+      "equalAuthors": [
+        "Haomin Zuo",
+        "Wenzhan Li"
+      ],
+      "role": "Co-first author · Project lead",
+      "venue": "CoRL 2026",
+      "status": "Accepted",
+      "year": 2026,
+      "category": "robot",
+      "summary": "Structured local preferences for likelihood-free reinforcement learning of flow-based manipulation policies.",
+      "contribution": "Co-designed chunk scoring and continuation ranking; developed the chunk-scorer theory and proofs, and supported experiments and infrastructure.",
+      "image": "assets/images/pawn.webp",
+      "imageAlt": "PAWN paper Figure 1 comparing local optimization signals for flow-based robot policies.",
+      "pdf": "assets/documents/pawn.pdf",
+      "code": "https://github.com/ZzzzzZhhmm/pawn"
+    },
+    {
+      "id": "comsim",
+      "short": "ComSim",
+      "title": "Building Scalable Real-World Robot Data Generation via Compositional Simulation",
+      "authors": [
+        "Yiran Qin",
+        "Jiahua Ma",
+        "Li Kang",
+        "Wenzhan Li",
+        "Yihang Jiao",
+        "Xin Wen",
+        "Xiufeng Song",
+        "Heng Zhou",
+        "Zhemeng Zhang",
+        "Zhenfei Yin",
+        "Xihui Liu",
+        "Philip Torr",
+        "Ruimao Zhang"
+      ],
+      "equalAuthors": [
+        "Yiran Qin",
+        "Jiahua Ma",
+        "Li Kang",
+        "Wenzhan Li"
+      ],
+      "role": "Co-first author",
+      "venue": "CoRL 2026",
+      "status": "Accepted",
+      "year": 2026,
+      "category": "robot",
+      "summary": "Combining classical and neural simulation to generate action-aligned robot videos with real-world appearance.",
+      "contribution": "Implemented core action- and visual-conditioning components of the neural simulator; contributed experiments and writing.",
+      "image": "assets/images/comsim.webp",
+      "imageAlt": "ComSim paper Figure 1 contrasting human-collected, classical-simulation, and neural-simulation data.",
+      "pdf": "assets/documents/comsim.pdf",
+      "project": "https://faceong.github.io/ComSim/"
+    },
+    {
+      "id": "dada",
+      "short": "DADA",
+      "title": "Dual-Alignment Domain Adaptation for Pedestrian Trajectory Prediction",
+      "authors": [
+        "Wenzhan Li",
+        "Fuhao Li",
+        "Xinghui Jing",
+        "Pingfa Feng",
+        "Long Zeng"
+      ],
+      "equalAuthors": [
+        "Wenzhan Li",
+        "Fuhao Li"
+      ],
+      "role": "Co-first author · Primary contributor",
+      "venue": "IEEE RA-L 2024",
+      "status": "Published",
+      "year": 2024,
+      "category": "prediction",
+      "summary": "Data-level and feature-level alignment for pedestrian trajectory prediction across previously unseen scenes.",
+      "contribution": "Designed the dual-alignment method and developed the core algorithms and pipeline, with evaluation across ETH/UCY transfer tasks.",
+      "image": "assets/images/dada.webp",
+      "imageAlt": "DADA paper Figure 2 showing data-level and feature-level adversarial alignment.",
+      "pdf": "assets/documents/dada.pdf",
+      "doi": "https://doi.org/10.1109/LRA.2024.3481831",
+      "code": "https://github.com/jackyzengl/DADA",
+      "bibtex": "@article{li2024dual,\n  title = {Dual-Alignment Domain Adaptation for Pedestrian Trajectory Prediction},\n  author = {Li, Wenzhan and Li, Fuhao and Jing, Xinghui and Feng, Pingfa and Zeng, Long},\n  journal = {IEEE Robotics and Automation Letters},\n  year = {2024},\n  volume = {9},\n  number = {12},\n  pages = {10962--10969},\n  doi = {10.1109/LRA.2024.3481831}\n}"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Sun Yat-sen University",
+      "qualification": "Ph.D. student · Artificial Intelligence",
+      "dates": "Sep 2026 — Present",
+      "detail": "School of Electronics and Communication Engineering, Shenzhen Campus. Advised by Prof. Yulan Guo; joint doctoral training at SLAI / EACV.",
+      "logo": "assets/images/sysu.png"
+    },
+    {
+      "institution": "Tsinghua University",
+      "qualification": "M.Eng. · Mechanical Engineering",
+      "dates": "Sep 2020 — Jun 2023",
+      "detail": "Intelligent Manufacturing, Shenzhen International Graduate School."
+    },
+    {
+      "institution": "Xi'an Jiaotong University",
+      "qualification": "B.Eng. · Mechanical Engineering",
+      "dates": "Sep 2016 — Jun 2020",
+      "detail": "Undergraduate training in mechanical engineering."
+    }
+  ],
+  "experience": [
+    {
+      "institution": "RoboSense",
+      "qualification": "Robotics Algorithm Engineer",
+      "dates": "Sep 2023 — Jul 2025",
+      "detail": "AI Group, Decision-making Team. Model fine-tuning, annotation tooling, online/offline consistency, and field-test algorithm improvements."
+    },
+    {
+      "institution": "Pudu Robotics",
+      "qualification": "Intern",
+      "dates": "Sep 2020 — Jun 2021",
+      "detail": "Developed and evaluated a YOLOv3-based detector with BiFPN for restaurant scenes."
+    }
+  ],
+  "appointment": {
+    "institution": "Sun Yat-sen University",
+    "qualification": "Research Assistant",
+    "detail": "World-model-based manipulation refinement and sim-to-real data generation. Contracted through The Chinese University of Hong Kong, Shenzhen."
+  },
+  "collaboration": "I also contribute agent orchestration and memory mechanisms to a collaborative SLAI / EACV project on 3D indoor scene generation.",
+  "future": "Looking ahead, I am interested in how heterogeneous robots might share knowledge and improve together across embodiments, environments, and tasks.",
+  "skills": [
+    "Python",
+    "C++",
+    "PyTorch",
+    "ROS 2",
+    "ONNX",
+    "Baidu Apollo"
+  ]
+}

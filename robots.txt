@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://li-wenzhan.github.io/sitemap.xml

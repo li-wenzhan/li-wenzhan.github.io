@@ -1,51 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- Template: https://github.com/luost26/academic-homepage -->
+<!doctype html>
+<html lang="{{lang}}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ page.title }} - {{ site.data.profile.navbar_name }}</title>
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ '/assets/css/global.css' | relative_url }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f6f1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{url}}">
+  {{alternateLinks}}
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:image" content="{{imageUrl}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/global.css">
+  <script src="assets/js/main.js" defer></script>
+  <script type="application/ld+json">{{schema}}</script>
 </head>
-<body class="bg-light d-flex flex-column min-vh-100" {{ page.body_attr }}>
-    {% include navbar.html %}
-    <main class="flex-grow-1 flex-shrink-0 {% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
-        {{content}}
-    </main>
-    {% include footer.html %}
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js" integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA==" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            renderMathInElement(document.body, {
-              delimiters: [
-                  {left: '$$', right: '$$', display: true},
-                  {left: '$', right: '$', display: false}
-              ],
-              throwOnError : false
-            });
-        });
-    </script>
-    <script src="{{ '/assets/js/common.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/bubble_visual_hash.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/semantic_scholar_citation_count.js' | relative_url }}"></script>
+<body>
+  <a class="skip-link" href="#main">{{skip}}</a>
+  {{icons}}
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#about" aria-label="Wenzhan Li, home"><span class="monogram">w<span>l</span><i>.</i></span><span class="brand-name">Wenzhan Li</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="{{navigationLabel}}">
+        <a href="#about" class="active">{{about}}</a><a href="#publications">{{researchNav}}</a><a href="#experience">{{experienceNav}}</a><a href="#contact">{{contactNav}}</a>
+        <a class="nav-cv" href="{{cv}}" title="{{cvDate}}" target="_blank" rel="noopener">{{cvNav}} {{arrow}}</a>
+      </nav>
+      <div class="nav-tools"><a class="language-switch" data-language data-base="{{languageHref}}" href="{{languageHref}}" hreflang="{{otherLang}}" aria-label="{{languageLabel}}">{{language}}</a><button class="theme-toggle" id="theme-toggle" aria-label="{{themeToDark}}" title="{{themeToDark}}">{{themeIcon}}</button><button class="menu-toggle" id="menu-toggle" aria-label="{{openMenu}}" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button></div>
+    </div>
+    <div class="reading-progress" aria-hidden="true"></div>
+  </header>
+  <main id="main">{{main}}</main>
+  <footer class="site-footer wrap"><div><span class="footer-mark">Wenzhan Li</span><span>{{footer}}</span></div><div><span>{{updatedPrefix}} {{updated}}</span><a href="https://github.com/li-wenzhan/li-wenzhan.github.io" target="_blank" rel="noopener">{{source}} {{arrow}}</a><a href="#about" class="back-top">{{backTop}}</a></div></footer>
+  {{dialog}}
+  <div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
 </body>
 </html>
