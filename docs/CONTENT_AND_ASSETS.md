@@ -50,9 +50,12 @@ lists and BibTeX retain the original English bibliographic names. Official
 advisor, school, institute, lab, and employer destinations are maintained in
 `_data/links.json` and rendered as inline links without allowing raw HTML in data.
 Institution names and logos link to their English main homepages; dedicated
-school, lab, and center references keep their specific destinations. SLAI and
-EACV appear first in the biography, sidebar, share card, and structured affiliation
-metadata, while the university enrollment remains explicit.
+school, lab, and center references keep their specific destinations. The author
+clarified two distinct priorities: SYSU precedes SLAI at the institution level;
+EACV is the primary research group, followed by SAIL. The advisor holds appointments
+at both institutions. Biography paragraphs, sidebar, share card, and structured
+metadata preserve this distinction; the latter separates affiliations from group
+membership rather than mixing the two hierarchies.
 Chinese/English editions describe the same record; formal paper titles, author
 lists, links, and BibTeX are shared rather than separately reinterpreted.
 
@@ -67,6 +70,7 @@ lists, links, and BibTeX are shared rather than separately reinterpreted.
 | `comsim.webp` | ComSim camera-ready PDF, page 2, Figure 1 |
 | `dada.webp` | DADA paper, page 3, Figure 2 |
 | `sysu.png`, `slai.png` | Institutional logo assets supplied with MERL materials |
+| `sysu-white.png`, `slai-white.png` | Author-supplied white institutional marks from the MERL brand assets, copied unchanged |
 | `cuhk-shenzhen.png` | Author-supplied CUHK-Shenzhen logo in the MERL brand assets, copied unchanged |
 | `tsinghua.png` | [Tsinghua University official website](https://www.tsinghua.edu.cn/image/logo180.png) |
 | `xjtu.png` | [Xi'an Jiaotong University official visual identity website](https://vi.xjtu.edu.cn/img/logo.png) |
@@ -78,6 +82,14 @@ lists, links, and BibTeX are shared rather than separately reinterpreted.
 
 The page does not imply that exploratory
 multi-robot interests are already implemented systems.
+
+Institution tiles place the official marks over solid backgrounds with consistent
+centering and spacing: SYSU green, SLAI rose, CUHK-Shenzhen purple, Tsinghua purple,
+Xi'an Jiaotong red, Pudu blue, and RoboSense charcoal. The author requested red
+for Xi'an Jiaotong to distinguish it from Shanghai Jiao Tong. Pudu's original
+vector mark is rendered white with a CSS filter; the supplied logo files remain
+unchanged. The CUHK-Shenzhen tile shows the colored crest from its horizontal
+logo, preserving its proportions.
 
 ## Fonts
 

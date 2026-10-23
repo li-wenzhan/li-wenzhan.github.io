@@ -10,7 +10,11 @@
 - Use `displayName` for localized identity (李文湛 in Chinese). Keep `name` and
   publication author lists in their original English bibliographic form.
 - Maintain official person/institution destinations in `_data/links.json`.
-- Emphasize doctoral research at SLAI / EACV while preserving SYSU enrollment.
+- Keep institution logos centered over solid theme-color tiles. Xi'an Jiaotong
+  uses a red background with its white official mark, as requested by the author.
+- Separate the two affiliation levels: SYSU precedes SLAI as an institution;
+  EACV precedes SAIL as the primary research group. The advisor holds appointments
+  at both institutions. Preserve SYSU doctoral enrollment and joint SLAI training.
   Institution names and logos use English main homepages; school/lab/center
   mentions can use dedicated destinations.
 - The continuous RA appointment spans CUHK-Shenzhen (Aug–Nov 2025) then SYSU

@@ -96,9 +96,9 @@ h1,h2,h3 {color:var(--ink)}
 .profile-interests {padding-top:20px;margin-top:20px;border-top:1px solid var(--line)}
 .profile-interests ul {padding:0;margin:8px 0 0;list-style:none;font-size:11px;line-height:1.9}
 .profile-interests li::before {content:'—';color:var(--accent);margin-right:7px}
-.profile-logos {margin-top:21px;padding:10px;background:#fffefb;border:1px solid var(--line);border-radius:3px;display:flex;align-items:center;gap:10px}
-.profile-logos>a {display:flex;align-items:center;justify-content:center;width:calc(50% - 5px)}
-.profile-logos img {object-fit:contain;width:100%;height:auto;max-height:29px}
+.profile-logos {margin-top:21px;display:flex;align-items:center;gap:8px}
+.profile-logos>a {display:flex;align-items:center;justify-content:center;width:calc(50% - 4px);height:50px;padding:8px;border:1px solid transparent;border-radius:4px}
+.profile-logos img {object-fit:contain;width:100%;height:100%;display:block}
 .inline-link {text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--ink) 30%,transparent);text-decoration-thickness:1px;text-underline-offset:3px}
 .inline-link:hover {text-decoration-color:var(--accent)}
 .page-content {min-width:0}
@@ -188,8 +188,13 @@ h1,h2,h3 {color:var(--ink)}
 .experience-entry:last-child {border-bottom:0}
 .institution-logo {width:104px;height:72px;border:1px solid #d9ded4;border-radius:4px;background:#fffefb;display:flex;justify-content:center;align-items:center;padding:11px}
 .institution-logo img {width:100%;height:100%;object-fit:contain;display:block}
+.institution-logo.sysu,.profile-logos>.sysu {background:#005826;border-color:#005826}
+.profile-logos>.slai {background:#b34b70;border-color:#b34b70}
+.institution-logo.cuhk {background:#5b256c;border-color:#5b256c}
+.institution-logo.pudu {background:#0068ff;border-color:#0068ff}
+.institution-logo.pudu img {filter:brightness(0) invert(1)}
 .institution-logo.tsinghua {background:#660874;border-color:#660874}
-.institution-logo.xjtu {background:#004a87;border-color:#004a87}
+.institution-logo.xjtu {background:#b31b25;border-color:#b31b25}
 .institution-logo.robosense {background:#18262b;border-color:#18262b}
 .institution-logo.cuhk img {width:48px;height:48px;object-fit:cover;object-position:left}
 .entry-heading {display:flex;align-items:baseline;justify-content:space-between;gap:5px 15px;flex-wrap:wrap}

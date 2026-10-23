@@ -11,7 +11,7 @@
   "cvDate": "September 2026",
   "portrait": "assets/images/portrait.png",
   "intro": "I study how robots can learn from experience, reason with world models, and adapt to a changing world.",
-  "bio": "My doctoral research is based at Shenzhen Loop Area Institute (SLAI), where I am part of the Center for Embodied Artificial Intelligence and Computer Vision (EACV). I am pursuing a Ph.D. in Artificial Intelligence at Sun Yat-sen University's School of Electronics and Communication Engineering through a joint doctoral training program with SLAI. I am advised by Prof. Yulan Guo and am also a member of the Spatial Artificial Intelligence Lab (SAIL).",
+  "bio": "I am pursuing a Ph.D. in Artificial Intelligence at Sun Yat-sen University's School of Electronics and Communication Engineering through a joint doctoral training program with Shenzhen Loop Area Institute (SLAI). I am advised by Prof. Yulan Guo, who holds appointments at both institutions.",
   "background": "Previously, I worked on robotics algorithms at RoboSense and received my master's degree from Tsinghua University. I enjoy bringing research ideas through method design, code, and experiments to working robotic systems.",
   "contact": "I welcome conversations about robot learning, research collaborations, and research internships. If our interests overlap, I would be happy to connect.",
   "news": [
@@ -269,7 +269,7 @@
       "qualification": "Ph.D. student · Artificial Intelligence",
       "dates": "Aug 2026 — Present",
       "detail": "School of Electronics and Communication Engineering, Shenzhen Campus. Advised by Prof. Yulan Guo. Joint doctoral training with SLAI, where my research is based in the Center for Embodied Artificial Intelligence and Computer Vision (EACV).",
-      "logo": "assets/images/sysu.png",
+      "logo": "assets/images/sysu-white.png",
       "brand": "sysu"
     },
     {
@@ -318,7 +318,7 @@
         "dates": "Dec 2025 — Apr 2026",
         "start": "2025-12",
         "end": "2026-04",
-        "logo": "assets/images/sysu.png",
+        "logo": "assets/images/sysu-white.png",
         "brand": "sysu"
       },
       {
@@ -347,5 +347,6 @@
     "World-action models",
     "Robot learning"
   ],
-  "displayName": "Wenzhan Li"
+  "displayName": "Wenzhan Li",
+  "researchAffiliation": "My research is primarily based in the Center for Embodied Artificial Intelligence and Computer Vision (EACV) at SLAI. I am also a member of the Spatial Artificial Intelligence Lab (SAIL) at Sun Yat-sen University."
 }
