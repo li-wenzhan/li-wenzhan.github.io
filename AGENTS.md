@@ -7,6 +7,9 @@
   checked-in root and subpage HTML, `404.html`, sitemap, and deployable `dist/`.
 - English is the default. Keep `_data/profile.zh.json` and `_data/i18n.json`
   synchronized, and include all generated English/Chinese pages when updating content.
+- Use `displayName` for localized identity (李文湛 in Chinese). Keep `name` and
+  publication author lists in their original English bibliographic form.
+- Maintain official person/institution destinations in `_data/links.json`.
 - Preserve the author's corrected News dates in the data source. News sorts
   automatically newest first. RA end dates belong in Experience, not News.
 - Honors are reserved in `_data/honors.json`. Keep the section hidden while the

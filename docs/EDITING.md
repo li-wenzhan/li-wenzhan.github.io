@@ -10,6 +10,7 @@
 | 对应中文内容 | [`_data/profile.zh.json`](../_data/profile.zh.json) |
 | 按钮、导航、标题文字 | [`_data/i18n.json`](../_data/i18n.json) |
 | 语言菜单名称、短标签和路径 | [`_data/languages.json`](../_data/languages.json) |
+| 导师、实验室及机构的官方链接 | [`_data/links.json`](../_data/links.json) |
 | 预留的荣誉与奖励 | [`_data/honors.json`](../_data/honors.json) |
 
 请修改数据源，然后运行 `npm run build`。`index.html`、`zh/index.html` 及各子页面为生成结果，直接修改 HTML 的内容会在下次构建时被覆盖。本轮作者在 HTML 中修改的博士开始时间（2026 年 8 月）与 CoRL 录用时间（2026 年 9 月）已经同步回数据源。

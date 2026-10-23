@@ -11,7 +11,7 @@
   "cvDate": "September 2026",
   "portrait": "assets/images/portrait.png",
   "intro": "I study how robots can learn from experience, reason with world models, and adapt to a changing world.",
-  "bio": "I am a Ph.D. student at Sun Yat-sen University, advised by Prof. Yulan Guo, with joint doctoral training at Shenzhen Loop Area Institute (SLAI). My research lies at the intersection of embodied AI, world-action models, and robot learning.",
+  "bio": "I am a Ph.D. student in the School of Electronics and Communication Engineering at Sun Yat-sen University, advised by Prof. Yulan Guo in the Spatial Artificial Intelligence Lab (SAIL), with joint doctoral training at Shenzhen Loop Area Institute (SLAI). My research lies at the intersection of embodied AI, world-action models, and robot learning.",
   "background": "Previously, I worked on robotics algorithms at RoboSense and received my master's degree from Tsinghua University. I enjoy bringing research ideas through method design, code, and experiments to working robotic systems.",
   "contact": "I welcome conversations about robot learning, research collaborations, and research internships. If our interests overlap, I would be happy to connect.",
   "news": [
@@ -330,5 +330,6 @@
     "Embodied AI",
     "World-action models",
     "Robot learning"
-  ]
+  ],
+  "displayName": "Wenzhan Li"
 }

@@ -97,7 +97,10 @@ h1,h2,h3 {color:var(--ink)}
 .profile-interests ul {padding:0;margin:8px 0 0;list-style:none;font-size:11px;line-height:1.9}
 .profile-interests li::before {content:'—';color:var(--accent);margin-right:7px}
 .profile-logos {margin-top:21px;padding:10px;background:#fffefb;border:1px solid var(--line);border-radius:3px;display:flex;align-items:center;gap:10px}
-.profile-logos img {object-fit:contain;width:calc(50% - 5px);height:auto;max-height:29px}
+.profile-logos>a {display:flex;align-items:center;justify-content:center;width:calc(50% - 5px)}
+.profile-logos img {object-fit:contain;width:100%;height:auto;max-height:29px}
+.inline-link {text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--ink) 30%,transparent);text-decoration-thickness:1px;text-underline-offset:3px}
+.inline-link:hover {text-decoration-color:var(--accent)}
 .page-content {min-width:0}
 .page-content:focus {outline:none}
 .page-heading {margin-bottom:27px;padding-bottom:21px;border-bottom:1px solid var(--line)}
@@ -259,7 +262,7 @@ h1,h2,h3 {color:var(--ink)}
   .academic-layout {grid-template-columns:180px minmax(0,1fr);gap:33px;padding-top:36px}
   .wrap {width:calc(100% - 48px)}.main-nav {gap:17px;font-size:11px}
   .profile-name {font-size:30px}.profile-sidebar {top:96px}
-  .profile-logos {flex-direction:column;gap:9px}.profile-logos img {width:115px;max-height:26px}
+  .profile-logos {flex-direction:column;gap:9px}.profile-logos>a {width:115px}.profile-logos img {max-height:26px}
   .profile-email {font-size:9px}.profile-affiliations {font-size:10px}
   .profile-links {gap:18px}.page-heading h1 {font-size:35px}
   .page-heading .eyebrow {font-size:8px}

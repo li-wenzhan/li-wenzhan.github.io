@@ -8,7 +8,7 @@ import urllib.request
 from fontTools.ttLib import TTFont
 
 root = Path(__file__).resolve().parents[1]
-text = ''.join((root / name).read_text(encoding='utf-8') for name in ['_data/profile.zh.json', '_data/i18n.json', '_data/honors.json', '_data/languages.json'])
+text = ''.join((root / name).read_text(encoding='utf-8') for name in ['_data/profile.zh.json', '_data/i18n.json', '_data/honors.json', '_data/languages.json', '_data/links.json'])
 characters = ''.join(sorted({c for c in text if ord(c) >= 0x3000}))
 for family, slug in [('Noto Sans SC', 'noto-sans-sc'), ('Noto Serif SC', 'noto-serif-sc')]:
     query = urllib.parse.urlencode({'family': family + ':wght@400', 'text': characters, 'display': 'swap'})

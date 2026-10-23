@@ -37,6 +37,12 @@ are the baseline for titles, author order, and equal-contribution markers.
 The original CV and PDFs are copied without modifying their content. The public
 page uses the author's CV email and does not add a telephone number to the HTML.
 The author confirmed the current identity and email on October 23, 2026.
+The author also confirmed the Chinese display name 李文湛 and membership in the
+Spatial Artificial Intelligence Lab (SAIL). Chinese navigation, profile labels,
+page titles, and structured metadata use the Chinese name; publication author
+lists and BibTeX retain the original English bibliographic names. Official
+advisor, school, institute, lab, and employer destinations are maintained in
+`_data/links.json` and rendered as inline links without allowing raw HTML in data.
 Chinese/English editions describe the same record; formal paper titles, author
 lists, links, and BibTeX are shared rather than separately reinterpreted.
 

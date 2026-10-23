@@ -34,6 +34,7 @@ publication data, font files, JavaScript, and disclosure boundaries. A push to
 | Chinese content overrides | [`_data/profile.zh.json`](_data/profile.zh.json) |
 | English/Chinese interface labels | [`_data/i18n.json`](_data/i18n.json) |
 | Language menu names and paths | [`_data/languages.json`](_data/languages.json) |
+| Official people, institution, and lab links | [`_data/links.json`](_data/links.json) |
 | Dated news | `news` array; automatically sorted newest first at build time |
 | Papers and contribution statements | `publications` array |
 | Honors and awards (currently hidden) | [`_data/honors.json`](_data/honors.json); empty lists render no section |
