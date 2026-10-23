@@ -191,12 +191,18 @@ h1,h2,h3 {color:var(--ink)}
 .institution-logo.tsinghua {background:#660874;border-color:#660874}
 .institution-logo.xjtu {background:#004a87;border-color:#004a87}
 .institution-logo.robosense {background:#18262b;border-color:#18262b}
+.institution-logo.cuhk img {width:48px;height:48px;object-fit:cover;object-position:left}
 .entry-heading {display:flex;align-items:baseline;justify-content:space-between;gap:5px 15px;flex-wrap:wrap}
-.entry-heading h3 {font-size:15px;line-height:1.5;font-weight:650;letter-spacing:-.2px}
+.entry-heading :is(h3,h4) {font-size:15px;line-height:1.5;font-weight:650;letter-spacing:-.2px;margin:0}
 .entry-date {font:9px/1.8 var(--mono);color:var(--muted);white-space:nowrap}
 .entry-role {font-size:12px;color:var(--accent);margin-top:5px}
 .entry-detail {font-size:11px;line-height:1.9;color:var(--muted);margin-top:9px;max-width:550px}
 .experience-group>.section-heading {margin-bottom:4px}
+.appointment-group {padding:24px 0;border-bottom:1px solid var(--line)}
+.appointment-summary {font-size:11px;line-height:1.9;color:var(--muted);margin-top:10px;max-width:680px}
+.appointment-stages {border-left:1px solid var(--line);padding-left:18px;margin:17px 0 0 6px}
+.appointment-stages .experience-entry {padding:16px 0;align-items:center}
+.appointment-stages .entry-heading h4 {font-size:14px}
 .skills-list {display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
 .skills-list li {font-family:var(--mono);font-size:10px;padding:5px 10px;background:var(--wash);border-radius:3px}
 .cv-note {border-top:1px solid var(--line);padding-top:20px;margin-top:30px;display:flex;align-items:center;justify-content:space-between;font-size:11px;gap:20px}
@@ -335,7 +341,12 @@ h1,h2,h3 {color:var(--ink)}
   .pub-toolbar {margin-bottom:22px}.pub-filters button {font-size:9px;padding:7px 8px}
   .experience-entry {grid-template-columns:74px minmax(0,1fr);gap:16px;padding:22px 0}
   .institution-logo {width:74px;height:61px;padding:8px}
-  .entry-heading h3 {font-size:14px}.entry-role {font-size:11px}
+  .entry-heading :is(h3,h4) {font-size:14px}.entry-role {font-size:11px}
+  .appointment-summary {font-size:10px}.appointment-stages {padding-left:12px;margin-left:3px}
+  .appointment-stages .experience-entry {grid-template-columns:64px minmax(0,1fr);gap:12px}
+  .appointment-stages .institution-logo {width:64px;height:54px;padding:6px}
+  .appointment-stages .institution-logo.cuhk img {width:40px;height:40px}
+  .appointment-stages .entry-heading h4 {font-size:12px}
   .entry-detail {font-size:10px}.entry-date {font-size:9px}
   .page-contents {gap:16px;font-size:10px;margin-bottom:27px}
   .cv-note {align-items:flex-start;flex-direction:column;gap:6px}

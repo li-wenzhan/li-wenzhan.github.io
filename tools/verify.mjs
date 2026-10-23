@@ -59,6 +59,9 @@ for(const d of [data,translated]){
 if(JSON.stringify(data.news.map(n=>[n.id,n.date]))!==JSON.stringify(translated.news.map(n=>[n.id,n.date])))fail('Bilingual News chronology differs');
 if(data.education[0].dates!=='Aug 2026 — Present')fail('PhD start is inconsistent with corrected News');
 if(data.appointment.dates!=='Aug 2025 — Apr 2026')fail('RA appointment interval changed');
+for(const profile of [data,translated]){
+  if(JSON.stringify(profile.appointment.stages?.map(s=>[s.start,s.end]))!==JSON.stringify([['2025-12','2026-04'],['2025-08','2025-11']]))fail('RA institution chronology differs from the author-confirmed dates');
+}
 for(const [locale,items] of Object.entries(honors)){
   if(!Array.isArray(items))fail(`Invalid honors list for ${locale}`);
   for(const h of items)if(!h.year||!h.title||!h.organization||h.url&&!/^https:\/\//.test(h.url))fail(`Incomplete honor in ${locale}`);

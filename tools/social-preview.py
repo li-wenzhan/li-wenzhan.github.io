@@ -21,7 +21,9 @@ draw.text((62, 89), 'EMBODIED AI / ROBOT LEARNING', font=font('ibm-plex-mono.wof
 draw.text((58, 163), 'Wenzhan Li.', font=font('newsreader.woff2', 99), fill=green)
 draw.text((63, 307), 'World-action models.', font=font('newsreader-italic.woff2', 40), fill=orange)
 draw.text((63, 357), 'Robot learning.', font=font('newsreader-italic.woff2', 40), fill=orange)
-draw.text((64, 462), 'Ph.D. student | Sun Yat-sen University / SLAI', font=font('manrope.woff2', 17), fill=green)
+draw.text((64, 462), 'Doctoral research | SLAI / EACV', font=font('manrope.woff2', 17), fill=green)
+draw.text((64, 496), 'Ph.D. student | Sun Yat-sen University', font=font('manrope.woff2', 16), fill=muted)
+
 draw.text((64, 554), 'li-wenzhan.github.io', font=font('ibm-plex-mono.woff2', 16), fill=muted)
 photo = Image.open(root / 'assets/images/portrait.png').convert('RGB')
 photo.thumbnail((326, 326), Image.Resampling.LANCZOS)

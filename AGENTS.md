@@ -10,6 +10,12 @@
 - Use `displayName` for localized identity (李文湛 in Chinese). Keep `name` and
   publication author lists in their original English bibliographic form.
 - Maintain official person/institution destinations in `_data/links.json`.
+- Emphasize doctoral research at SLAI / EACV while preserving SYSU enrollment.
+  Institution names and logos use English main homepages; school/lab/center
+  mentions can use dedicated destinations.
+- The continuous RA appointment spans CUHK-Shenzhen (Aug–Nov 2025) then SYSU
+  (Dec 2025–Apr 2026), following the advisor's move. Do not restore the former
+  contract-only description or announce RA completion in News.
 - Preserve the author's corrected News dates in the data source. News sorts
   automatically newest first. RA end dates belong in Experience, not News.
 - Honors are reserved in `_data/honors.json`. Keep the section hidden while the

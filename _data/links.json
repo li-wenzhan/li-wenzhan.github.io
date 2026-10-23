@@ -8,7 +8,7 @@
     ]
   },
   {
-    "url": "https://www.slai.edu.cn/",
+    "url": "https://www.slai.edu.cn/en/home",
     "labels": [
       "深圳河套学院",
       "Shenzhen Loop Area Institute",
@@ -44,14 +44,14 @@
     ]
   },
   {
-    "url": "https://www.sysu.edu.cn/",
+    "url": "https://www.sysu.edu.cn/sysuen/",
     "labels": [
       "Sun Yat-sen University",
       "中山大学"
     ]
   },
   {
-    "url": "https://www.tsinghua.edu.cn/",
+    "url": "https://www.tsinghua.edu.cn/en/",
     "labels": [
       "Tsinghua University",
       "Tsinghua Shenzhen International Graduate School",
@@ -59,7 +59,7 @@
     ]
   },
   {
-    "url": "https://www.xjtu.edu.cn/",
+    "url": "https://en.xjtu.edu.cn/",
     "labels": [
       "Xi'an Jiaotong University",
       "Xi’an Jiaotong University",
@@ -78,7 +78,19 @@
     "url": "https://www.cuhk.edu.cn/en",
     "labels": [
       "The Chinese University of Hong Kong, Shenzhen",
-      "香港中文大学（深圳）"
+      "香港中文大学（深圳）",
+      "CUHK-Shenzhen"
+    ]
+  },
+  {
+    "url": "https://www.slai.edu.cn/en/node/381",
+    "labels": [
+      "Center for Embodied Artificial Intelligence and Computer Vision (EACV)",
+      "Center for Embodied Artificial Intelligence and Computer Vision",
+      "具身人工智能与计算机视觉研究中心（EACV）",
+      "具身人工智能与计算机视觉研究中心",
+      "EACV Research Center",
+      "EACV"
     ]
   }
 ]

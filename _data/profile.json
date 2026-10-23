@@ -11,7 +11,7 @@
   "cvDate": "September 2026",
   "portrait": "assets/images/portrait.png",
   "intro": "I study how robots can learn from experience, reason with world models, and adapt to a changing world.",
-  "bio": "I am a Ph.D. student in the School of Electronics and Communication Engineering at Sun Yat-sen University, advised by Prof. Yulan Guo in the Spatial Artificial Intelligence Lab (SAIL), with joint doctoral training at Shenzhen Loop Area Institute (SLAI). My research lies at the intersection of embodied AI, world-action models, and robot learning.",
+  "bio": "My doctoral research is based at Shenzhen Loop Area Institute (SLAI), where I am part of the Center for Embodied Artificial Intelligence and Computer Vision (EACV). I am pursuing a Ph.D. in Artificial Intelligence at Sun Yat-sen University's School of Electronics and Communication Engineering through a joint doctoral training program with SLAI. I am advised by Prof. Yulan Guo and am also a member of the Spatial Artificial Intelligence Lab (SAIL).",
   "background": "Previously, I worked on robotics algorithms at RoboSense and received my master's degree from Tsinghua University. I enjoy bringing research ideas through method design, code, and experiments to working robotic systems.",
   "contact": "I welcome conversations about robot learning, research collaborations, and research internships. If our interests overlap, I would be happy to connect.",
   "news": [
@@ -107,7 +107,7 @@
       "id": "ra-start",
       "date": "2025-08",
       "label": "Aug 2025",
-      "text": "Started as a Research Assistant at Sun Yat-sen University, working on robot learning and sim-to-real transfer.",
+      "text": "Started as a Research Assistant at The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen), working on robot learning and sim-to-real transfer.",
       "tag": "Research",
       "anchor": "experience/#research-appointment"
     }
@@ -268,7 +268,7 @@
       "institution": "Sun Yat-sen University",
       "qualification": "Ph.D. student · Artificial Intelligence",
       "dates": "Aug 2026 — Present",
-      "detail": "School of Electronics and Communication Engineering, Shenzhen Campus. Advised by Prof. Yulan Guo; joint doctoral training at SLAI / EACV.",
+      "detail": "School of Electronics and Communication Engineering, Shenzhen Campus. Advised by Prof. Yulan Guo. Joint doctoral training with SLAI, where my research is based in the Center for Embodied Artificial Intelligence and Computer Vision (EACV).",
       "logo": "assets/images/sysu.png",
       "brand": "sysu"
     },
@@ -308,14 +308,30 @@
     }
   ],
   "appointment": {
-    "institution": "Sun Yat-sen University",
+    "institution": "Sun Yat-sen University / The Chinese University of Hong Kong, Shenzhen",
     "qualification": "Research Assistant",
-    "detail": "World-model-based manipulation refinement and sim-to-real data generation. Contracted through The Chinese University of Hong Kong, Shenzhen.",
-    "logo": "assets/images/sysu.png",
-    "brand": "sysu",
-    "dates": "Aug 2025 — Apr 2026"
+    "dates": "Aug 2025 — Apr 2026",
+    "detail": "Worked on world-model-based robot policy refinement and sim-to-real data generation. I began at CUHK-Shenzhen and continued at Sun Yat-sen University following my advisor's move.",
+    "stages": [
+      {
+        "institution": "Sun Yat-sen University",
+        "dates": "Dec 2025 — Apr 2026",
+        "start": "2025-12",
+        "end": "2026-04",
+        "logo": "assets/images/sysu.png",
+        "brand": "sysu"
+      },
+      {
+        "institution": "The Chinese University of Hong Kong, Shenzhen",
+        "dates": "Aug 2025 — Nov 2025",
+        "start": "2025-08",
+        "end": "2025-11",
+        "logo": "assets/images/cuhk-shenzhen.png",
+        "brand": "cuhk"
+      }
+    ]
   },
-  "collaboration": "I also contribute agent orchestration and memory mechanisms to a collaborative SLAI / EACV project on 3D indoor scene generation.",
+  "collaboration": "At EACV, SLAI, I also contribute agent orchestration and memory mechanisms to a collaborative project on 3D indoor scene generation.",
   "future": "Looking ahead, I am interested in how heterogeneous robots might share knowledge and improve together across embodiments, environments, and tasks.",
   "skills": [
     "Python",

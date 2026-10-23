@@ -6,8 +6,10 @@ The author's supplied September 2026 CV is the baseline for education,
 employment, research responsibilities, and ongoing work. Camera-ready papers
 are the baseline for titles, author order, and equal-contribution markers.
 
-- Sun Yat-sen University Ph.D. student from August 2026, advised by Yulan Guo;
-  joint doctoral training at SLAI / EACV.
+- Doctoral research is primarily based at the Center for Embodied Artificial
+  Intelligence and Computer Vision (EACV), Shenzhen Loop Area Institute (SLAI).
+  The author is a Sun Yat-sen University Ph.D. student from August 2026,
+  advised by Yulan Guo, through joint doctoral training with SLAI.
 - MERL: sole first author and project lead. PAWN: co-first author, listed second,
   and project lead. ComSim: co-first author, listed fourth. These are CoRL 2026
   accepted papers, with official proceedings metadata pending publication.
@@ -22,7 +24,11 @@ are the baseline for titles, author order, and equal-contribution markers.
   WPBP's invitation gives its workshop date, June 1, 2026, in Vienna. Meeting
   dates appear inside the news text; the acceptance dates remain unchanged.
 - RA appointment: August 2025–April 2026, confirmed by the author. Only the start
-  is announced in News, as requested. Degree and employment endpoints follow the CV.
+  is announced in News, as requested. The author clarified the sequence:
+  CUHK-Shenzhen, August–November 2025; Sun Yat-sen University, December 2025–April
+  2026. This is shown as continuous research across two institutions following
+  the advisor's move, rather than simultaneous appointments or a contract-only
+  connection. The August News therefore names CUHK-Shenzhen.
 - DADA's extended abstract was accepted for an oral presentation at WPBP @ ICRA
   2026 on April 11, per the author-supplied acceptance notification. The
   [workshop's accepted list](https://workshop-pbp2026.github.io/) confirms the
@@ -43,6 +49,10 @@ page titles, and structured metadata use the Chinese name; publication author
 lists and BibTeX retain the original English bibliographic names. Official
 advisor, school, institute, lab, and employer destinations are maintained in
 `_data/links.json` and rendered as inline links without allowing raw HTML in data.
+Institution names and logos link to their English main homepages; dedicated
+school, lab, and center references keep their specific destinations. SLAI and
+EACV appear first in the biography, sidebar, share card, and structured affiliation
+metadata, while the university enrollment remains explicit.
 Chinese/English editions describe the same record; formal paper titles, author
 lists, links, and BibTeX are shared rather than separately reinterpreted.
 
@@ -57,6 +67,7 @@ lists, links, and BibTeX are shared rather than separately reinterpreted.
 | `comsim.webp` | ComSim camera-ready PDF, page 2, Figure 1 |
 | `dada.webp` | DADA paper, page 3, Figure 2 |
 | `sysu.png`, `slai.png` | Institutional logo assets supplied with MERL materials |
+| `cuhk-shenzhen.png` | Author-supplied CUHK-Shenzhen logo in the MERL brand assets, copied unchanged |
 | `tsinghua.png` | [Tsinghua University official website](https://www.tsinghua.edu.cn/image/logo180.png) |
 | `xjtu.png` | [Xi'an Jiaotong University official visual identity website](https://vi.xjtu.edu.cn/img/logo.png) |
 | `robosense.png` | [RoboSense official website](https://www.robosense.ai/en), its linked `cdn.robosense.cn/shop_logo` |
