@@ -7,6 +7,7 @@ const read = name => readFile(path.join(root, name), 'utf8');
 const english = JSON.parse(await read('_data/profile.json'));
 const chinese = JSON.parse(await read('_data/profile.zh.json'));
 const translations = JSON.parse(await read('_data/i18n.json'));
+const languages = JSON.parse(await read('_data/languages.json'));
 const honors = JSON.parse(await read('_data/honors.json'));
 const template = await read('_layouts/default.html');
 const esc = value => String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
@@ -22,6 +23,9 @@ const icons = `<svg class="icon-defs" aria-hidden="true" xmlns="http://www.w3.or
 <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V4H4v11h4"/></symbol>
 <symbol id="i-theme" viewBox="0 0 24 24"><path d="M20.8 13a8.9 8.9 0 0 1-9.8-9.8A9 9 0 1 0 20.8 13Z"/></symbol>
 <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18M12 3c-5 5-5 13 0 18"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
 </defs></svg>`;
 const icon = name => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const arrow = icon('arrow');
@@ -66,8 +70,10 @@ for (const locale of ['en', 'zh']) {
     const pageTitle = {about: t.siteTitle, publications: `${t.pagePublications} · Wenzhan Li`, experience: `${t.pageExperience} · Wenzhan Li`, research: `${t.pageResearch} · Wenzhan Li`}[page];
     const labels = {about: t.about, publications: t.publicationsNav, experience: t.experienceNav, research: t.researchNav};
     const navigation = Object.entries(routes).map(([key, value]) => `<a href="${route(value)}"${key === page ? ' class="active" aria-current="page"' : ''}>${labels[key]}</a>`).join('');
+    const currentLanguage = languages.find(language => language.locale === locale);
+    const languagePicker = `<details class="language-picker" id="language-picker"><summary class="language-toggle" aria-label="${esc(t.languageLabel)}" title="${esc(t.languageSelect)}" aria-controls="language-options">${icon('globe')}<span class="language-code">${esc(currentLanguage.shortName)}</span>${icon('chevron')}</summary><nav class="language-options" id="language-options" aria-label="${esc(t.languageSelect)}"><span class="language-caption">${esc(t.languageCaption)}</span>${languages.map(language => {const href = `/${language.path}${slug}`;return `<a href="${href}" data-language data-base="${href}" lang="${language.lang}" hreflang="${language.lang}"${language.locale === locale ? ' aria-current="true"' : ''}><span>${esc(language.name)}</span>${icon('check')}</a>`;}).join('')}</nav></details>`;
     const values = {...t, page, navigation, title: esc(pageTitle), description: esc(t.description), url: data.url + prefix + slug, homeHref: route(''), cv: data.cv, cvDate: data.cvDate, imageUrl: data.url + 'assets/images/social-preview.png', icons, sidebar, main: content[page], dialog: (page === 'publications' ? dialog : '') + `<script type="application/json" id="ui-data">${json(t)}</script>`, schema, arrow, themeIcon: icon('theme'), updatedPrefix: t.updated, updated: data.updatedLabel, languageHref: `/${locale === 'en' ? 'zh/' : ''}${slug}`, otherLang: locale === 'en' ? 'zh-CN' : 'en', alternateLinks: `<link rel="alternate" hreflang="en" href="${data.url}${slug}"><link rel="alternate" hreflang="zh-CN" href="${data.url}zh/${slug}"><link rel="alternate" hreflang="x-default" href="${data.url}${slug}">`};
-    let html = template.replace(/\{\{(\w+)\}\}/g, (_, key) => values[key] ?? '');
+    let html = template.replace(/\{\{(\w+)\}\}/g, (_, key) => key === 'languagePicker' ? languagePicker : values[key] ?? '');
     html = html.replace(/(href|src|poster)="assets\//g, '$1="/assets/').replace(/[ \t]+$/gm, '');
     const filename = `${prefix}${slug}index.html`;
     await mkdir(path.dirname(path.join(root, filename)), {recursive: true});

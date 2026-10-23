@@ -33,6 +33,7 @@ publication data, font files, JavaScript, and disclosure boundaries. A push to
 | Biography, contact details, status | [`_data/profile.json`](_data/profile.json) |
 | Chinese content overrides | [`_data/profile.zh.json`](_data/profile.zh.json) |
 | English/Chinese interface labels | [`_data/i18n.json`](_data/i18n.json) |
+| Language menu names and paths | [`_data/languages.json`](_data/languages.json) |
 | Dated news | `news` array; automatically sorted newest first at build time |
 | Papers and contribution statements | `publications` array |
 | Honors and awards (currently hidden) | [`_data/honors.json`](_data/honors.json); empty lists render no section |
@@ -67,6 +68,8 @@ the self-hosted Noto font subsets (requires `fonttools[woff]` and network access
 - Institution logos alongside education, research appointments, and industry roles.
 - DADA's WPBP @ ICRA 2026 oral extended abstract grouped with its RA-L paper.
 - Complete English/Chinese pages with reciprocal `hreflang` metadata.
+- Globe language picker with native-language labels, a current-language mark,
+  keyboard navigation, and a functional no-JavaScript dropdown.
 - Native contribution disclosures and paper/video controls.
 - Citation dialogs with keyboard dismissal and clipboard fallback.
 - Light/dark themes with a saved preference.

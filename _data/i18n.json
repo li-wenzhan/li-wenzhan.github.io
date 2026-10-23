@@ -13,8 +13,8 @@
     "backTop": "Back to top ↑",
     "updated": "Updated",
     "footer": "Embodied AI · World-action models · Robot learning",
-    "language": "中文",
-    "languageLabel": "切换到中文",
+    "language": "EN",
+    "languageLabel": "Language: English",
     "heroEyebrow": "Embodied AI & robot learning",
     "heroHeading": "",
     "touch": "Get in touch",
@@ -113,7 +113,9 @@
     "experienceOverview": "Sun Yat-sen University / SLAI · Tsinghua University · Xi’an Jiaotong University · RoboSense",
     "readMore": "Read more",
     "tocLabel": "On this page",
-    "publicationContents": "Papers"
+    "publicationContents": "Papers",
+    "languageSelect": "Select language",
+    "languageCaption": "Language"
   },
   "zh": {
     "lang": "zh-CN",
@@ -129,8 +131,8 @@
     "backTop": "返回顶部 ↑",
     "updated": "更新于",
     "footer": "具身智能 · 世界—动作模型 · 机器人学习",
-    "language": "EN",
-    "languageLabel": "Switch to English",
+    "language": "中",
+    "languageLabel": "语言：简体中文",
     "heroEyebrow": "具身智能与机器人学习",
     "heroHeading": "",
     "touch": "联系交流",
@@ -229,6 +231,8 @@
     "experienceOverview": "中山大学 / 深圳河套学院 · 清华大学 · 西安交通大学 · RoboSense",
     "readMore": "了解更多",
     "tocLabel": "本页目录",
-    "publicationContents": "论文"
+    "publicationContents": "论文",
+    "languageSelect": "选择语言",
+    "languageCaption": "语言"
   }
 }

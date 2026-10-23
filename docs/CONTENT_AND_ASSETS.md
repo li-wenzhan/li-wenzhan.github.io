@@ -16,6 +16,11 @@ are the baseline for titles, author order, and equal-contribution markers.
 - The author corrected the Ph.D. start to August 2026 and the CoRL acceptance
   News to September 2026 on October 23. Both manual HTML edits were preserved
   in the maintained data. The unchanged September CV may retain the older date.
+- The CoRL acceptance update uses the author's personal voice and invitation
+  to meet in Austin on November 9, 2026, the conference's first day. The date
+  and city are confirmed by the [official CoRL 2026 website](https://www.corl.org/home).
+  WPBP's invitation gives its workshop date, June 1, 2026, in Vienna. Meeting
+  dates appear inside the news text; the acceptance dates remain unchanged.
 - RA appointment: August 2025–April 2026, confirmed by the author. Only the start
   is announced in News, as requested. Degree and employment endpoints follow the CV.
 - DADA's extended abstract was accepted for an oral presentation at WPBP @ ICRA

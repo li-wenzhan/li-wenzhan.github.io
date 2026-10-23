@@ -3,7 +3,10 @@
   const $ = (s,root=document) => root.querySelector(s);
   const $$ = (s,root=document) => [...root.querySelectorAll(s)];
   const ui = JSON.parse($('#ui-data').textContent);
-  const languageLink = $('[data-language]');
+  const languageLinks = $$('[data-language]');
+  const languagePicker = $('#language-picker');
+  const languageToggle = $('.language-toggle',languagePicker);
+  const closeLanguage = (restoreFocus=false) => {languagePicker.open=false;if(restoreFocus)languageToggle.focus();};
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const announce = text => { $('#announcement').textContent = text; };
   const themeButton = $('#theme-toggle');
@@ -25,18 +28,42 @@
   const closeMenu = () => {nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label',ui.openMenu);};
   menu.addEventListener('click',()=>{
     const open = menu.getAttribute('aria-expanded')!=='true';
+    if(open)closeLanguage();
     nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?ui.closeMenu:ui.openMenu);
   });
   $$('a',nav).forEach(a=>a.addEventListener('click',closeMenu));
-  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open')){closeMenu();menu.focus();}});
-  document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu();});
+  languagePicker.addEventListener('toggle',()=>{if(languagePicker.open)closeMenu();});
+  languageToggle.addEventListener('keydown',event=>{
+    if(event.key!=='ArrowDown'&&event.key!=='ArrowUp')return;
+    event.preventDefault();languagePicker.open=true;
+    languageLinks[event.key==='ArrowDown'?0:languageLinks.length-1].focus();
+  });
+  languageLinks.forEach((link,index)=>{
+    link.addEventListener('click',()=>closeLanguage(true));
+    link.addEventListener('keydown',event=>{
+      let next;
+      if(event.key==='ArrowDown')next=(index+1)%languageLinks.length;
+      else if(event.key==='ArrowUp')next=(index-1+languageLinks.length)%languageLinks.length;
+      else if(event.key==='Home')next=0;
+      else if(event.key==='End')next=languageLinks.length-1;
+      else return;
+      event.preventDefault();languageLinks[next].focus();
+    });
+  });
+  languagePicker.addEventListener('focusout',event=>{if(!languagePicker.contains(event.relatedTarget))closeLanguage();});
+  document.addEventListener('keydown',event=>{
+    if(event.key!=='Escape')return;
+    if(languagePicker.open){event.preventDefault();closeLanguage(true);}
+    else if(nav.classList.contains('open')){closeMenu();menu.focus();}
+  });
+  document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu();if(!languagePicker.contains(event.target))closeLanguage();});
   window.addEventListener('resize',()=>{if(innerWidth>640)closeMenu();},{passive:true});
   let progressQueued=false;
   function updateProgress() {
     progressQueued=false;
     const total=document.documentElement.scrollHeight-innerHeight;
     document.documentElement.style.setProperty('--progress',String(total>0?Math.min(1,scrollY/total):0));
-    languageLink.href=languageLink.dataset.base+location.hash;
+    languageLinks.forEach(link=>{link.href=link.dataset.base+location.hash;});
   }
   window.addEventListener('hashchange',updateProgress);
   window.addEventListener('scroll',()=>{if(!progressQueued){progressQueued=true;requestAnimationFrame(updateProgress);}},{passive:true});
