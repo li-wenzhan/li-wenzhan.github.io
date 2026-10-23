@@ -4,9 +4,15 @@
   homepage is exclusively `https://merl-project.github.io/`.
 - Edit `_data/profile.json` for biography, news, publication metadata, education,
   experience, and contact information. Run `npm run build` to regenerate the
-  checked-in `index.html`, `404.html`, sitemap, and deployable `dist/`.
+  checked-in root and subpage HTML, `404.html`, sitemap, and deployable `dist/`.
 - English is the default. Keep `_data/profile.zh.json` and `_data/i18n.json`
-  synchronized, and include generated `zh/index.html` when updating content.
+  synchronized, and include all generated English/Chinese pages when updating content.
+- Preserve the author's corrected News dates in the data source. News sorts
+  automatically newest first. RA end dates belong in Experience, not News.
+- Honors are reserved in `_data/honors.json`. Keep the section hidden while the
+  bilingual arrays are empty. Never publish sample awards.
+- Group DADA's WPBP @ ICRA 2026 oral extended abstract with DADA; do not count it
+  as an additional full paper. Keep the supplied acceptance email private.
 - Preserve verified authorship, accepted/published status, current student status,
   and contribution scopes. Never invent awards, affiliations, availability,
   Google Scholar IDs, citations, or achievements.

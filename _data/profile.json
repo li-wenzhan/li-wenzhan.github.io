@@ -16,17 +16,100 @@
   "contact": "I welcome conversations about robot learning, research collaborations, and research internships. If our interests overlap, I would be happy to connect.",
   "news": [
     {
+      "id": "corl",
       "date": "2026-09",
       "label": "Sep 2026",
-      "text": "Started my Ph.D. at Sun Yat-sen University, with joint training at SLAI.",
-      "tag": "A new chapter"
-    },
-    {
-      "date": "2026",
-      "label": "2026",
       "text": "MERL, PAWN, and ComSim were accepted to CoRL 2026.",
       "tag": "Research",
-      "anchor": "#publications"
+      "anchor": "publications/"
+    },
+    {
+      "id": "phd",
+      "date": "2026-08",
+      "label": "Aug 2026",
+      "text": "Started my Ph.D. at Sun Yat-sen University, with joint training at SLAI.",
+      "tag": "A new chapter",
+      "anchor": "experience/#education"
+    },
+    {
+      "id": "wpbp",
+      "date": "2026-04-11",
+      "label": "Apr 2026",
+      "text": "The extended abstract of DADA was accepted for an oral presentation at WPBP @ ICRA 2026. See you in Vienna!",
+      "tag": "Oral presentation",
+      "anchor": "publications/#pub-dada"
+    },
+    {
+      "id": "robosense-end",
+      "date": "2025-07",
+      "label": "Jul 2025",
+      "text": "Wrapped up my role as a Robotics Algorithm Engineer at RoboSense. Grateful for the experience and the team.",
+      "tag": "Experience",
+      "anchor": "experience/#industry"
+    },
+    {
+      "id": "dada",
+      "date": "2024-09-25",
+      "label": "Sep 2024",
+      "text": "DADA was accepted to IEEE Robotics and Automation Letters (RA-L).",
+      "tag": "Research",
+      "anchor": "publications/#pub-dada"
+    },
+    {
+      "id": "robosense-start",
+      "date": "2023-09",
+      "label": "Sep 2023",
+      "text": "Joined RoboSense as a Robotics Algorithm Engineer in the AI Group.",
+      "tag": "Experience",
+      "anchor": "experience/#industry"
+    },
+    {
+      "id": "masters-end",
+      "date": "2023-06",
+      "label": "Jun 2023",
+      "text": "Received my master's degree in Mechanical Engineering from Tsinghua University.",
+      "tag": "Graduation",
+      "anchor": "experience/#education"
+    },
+    {
+      "id": "pudu-end",
+      "date": "2021-06",
+      "label": "Jun 2021",
+      "text": "Completed my robotics internship at Pudu Robotics.",
+      "tag": "Experience",
+      "anchor": "experience/#industry"
+    },
+    {
+      "id": "masters-start",
+      "date": "2020-09",
+      "label": "Sep 2020",
+      "text": "Began my master's studies at Tsinghua Shenzhen International Graduate School.",
+      "tag": "Education",
+      "anchor": "experience/#education"
+    },
+    {
+      "id": "pudu-start",
+      "date": "2020-09",
+      "label": "Sep 2020",
+      "text": "Started an internship at Pudu Robotics, working on visual perception for service robots.",
+      "tag": "Experience",
+      "anchor": "experience/#industry"
+    },
+    {
+      "id": "bachelors-end",
+      "date": "2020-06",
+      "label": "Jun 2020",
+      "text": "Graduated from Xi'an Jiaotong University with a bachelor's degree in Mechanical Engineering.",
+      "tag": "Graduation",
+      "anchor": "experience/#education"
+    },
+    {
+      "id": "ra-start",
+      "date": "2025-08",
+      "label": "Aug 2025",
+      "text": "Started as a Research Assistant at Sun Yat-sen University, working on robot learning and sim-to-real transfer.",
+      "tag": "Research",
+      "anchor": "experience/#research-appointment"
     }
   ],
   "research": [
@@ -170,28 +253,40 @@
       "pdf": "assets/documents/dada.pdf",
       "doi": "https://doi.org/10.1109/LRA.2024.3481831",
       "code": "https://github.com/jackyzengl/DADA",
-      "bibtex": "@article{li2024dual,\n  title = {Dual-Alignment Domain Adaptation for Pedestrian Trajectory Prediction},\n  author = {Li, Wenzhan and Li, Fuhao and Jing, Xinghui and Feng, Pingfa and Zeng, Long},\n  journal = {IEEE Robotics and Automation Letters},\n  year = {2024},\n  volume = {9},\n  number = {12},\n  pages = {10962--10969},\n  doi = {10.1109/LRA.2024.3481831}\n}"
+      "bibtex": "@article{li2024dual,\n  title = {Dual-Alignment Domain Adaptation for Pedestrian Trajectory Prediction},\n  author = {Li, Wenzhan and Li, Fuhao and Jing, Xinghui and Feng, Pingfa and Zeng, Long},\n  journal = {IEEE Robotics and Automation Letters},\n  year = {2024},\n  volume = {9},\n  number = {12},\n  pages = {10962--10969},\n  doi = {10.1109/LRA.2024.3481831}\n}",
+      "workshop": {
+        "label": "WPBP @ ICRA 2026 · Oral",
+        "url": "https://workshop-pbp2026.github.io/",
+        "pdf": "https://workshop-pbp2026.github.io/papers/8%5CCameraReady%5CDADA_ICRA_WPBP2026.pdf",
+        "date": "2026-04-11",
+        "note": "An extended abstract of DADA, accepted for oral presentation at the Workshop on Pedestrian Behaviour Prediction, ICRA 2026 (Vienna)."
+      }
     }
   ],
   "education": [
     {
       "institution": "Sun Yat-sen University",
       "qualification": "Ph.D. student · Artificial Intelligence",
-      "dates": "Sep 2026 — Present",
+      "dates": "Aug 2026 — Present",
       "detail": "School of Electronics and Communication Engineering, Shenzhen Campus. Advised by Prof. Yulan Guo; joint doctoral training at SLAI / EACV.",
-      "logo": "assets/images/sysu.png"
+      "logo": "assets/images/sysu.png",
+      "brand": "sysu"
     },
     {
       "institution": "Tsinghua University",
       "qualification": "M.Eng. · Mechanical Engineering",
       "dates": "Sep 2020 — Jun 2023",
-      "detail": "Intelligent Manufacturing, Shenzhen International Graduate School."
+      "detail": "Intelligent Manufacturing, Shenzhen International Graduate School.",
+      "logo": "assets/images/tsinghua.png",
+      "brand": "tsinghua"
     },
     {
       "institution": "Xi'an Jiaotong University",
       "qualification": "B.Eng. · Mechanical Engineering",
       "dates": "Sep 2016 — Jun 2020",
-      "detail": "Undergraduate training in mechanical engineering."
+      "detail": "Undergraduate training in mechanical engineering.",
+      "logo": "assets/images/xjtu.png",
+      "brand": "xjtu"
     }
   ],
   "experience": [
@@ -199,19 +294,26 @@
       "institution": "RoboSense",
       "qualification": "Robotics Algorithm Engineer",
       "dates": "Sep 2023 — Jul 2025",
-      "detail": "AI Group, Decision-making Team. Model fine-tuning, annotation tooling, online/offline consistency, and field-test algorithm improvements."
+      "detail": "AI Group, Decision-making Team. Model fine-tuning, annotation tooling, online/offline consistency, and field-test algorithm improvements.",
+      "logo": "assets/images/robosense.png",
+      "brand": "robosense"
     },
     {
       "institution": "Pudu Robotics",
       "qualification": "Intern",
       "dates": "Sep 2020 — Jun 2021",
-      "detail": "Developed and evaluated a YOLOv3-based detector with BiFPN for restaurant scenes."
+      "detail": "Developed and evaluated a YOLOv3-based detector with BiFPN for restaurant scenes.",
+      "logo": "assets/images/pudu.svg",
+      "brand": "pudu"
     }
   ],
   "appointment": {
     "institution": "Sun Yat-sen University",
     "qualification": "Research Assistant",
-    "detail": "World-model-based manipulation refinement and sim-to-real data generation. Contracted through The Chinese University of Hong Kong, Shenzhen."
+    "detail": "World-model-based manipulation refinement and sim-to-real data generation. Contracted through The Chinese University of Hong Kong, Shenzhen.",
+    "logo": "assets/images/sysu.png",
+    "brand": "sysu",
+    "dates": "Aug 2025 — Apr 2026"
   },
   "collaboration": "I also contribute agent orchestration and memory mechanisms to a collaborative SLAI / EACV project on 3D indoor scene generation.",
   "future": "Looking ahead, I am interested in how heterogeneous robots might share knowledge and improve together across embodiments, environments, and tasks.",
@@ -222,5 +324,11 @@
     "ROS 2",
     "ONNX",
     "Baidu Apollo"
+  ],
+  "researchIntro": "My research connects world models with robotic action: how robots can learn from experience, refine their policies, and transfer what they learn to new environments.",
+  "interests": [
+    "Embodied AI",
+    "World-action models",
+    "Robot learning"
   ]
 }

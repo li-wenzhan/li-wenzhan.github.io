@@ -31,17 +31,14 @@
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open')){closeMenu();menu.focus();}});
   document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu();});
   window.addEventListener('resize',()=>{if(innerWidth>640)closeMenu();},{passive:true});
-  const sectionLinks = $$('a[href^="#"]',nav);
   let progressQueued=false;
   function updateProgress() {
     progressQueued=false;
     const total=document.documentElement.scrollHeight-innerHeight;
     document.documentElement.style.setProperty('--progress',String(total>0?Math.min(1,scrollY/total):0));
-    let active='about';
-    for(const id of ['about','publications','experience','contact'])if($('#'+id).getBoundingClientRect().top<Math.min(innerHeight*.4,250))active=id;
-    languageLink.href=languageLink.dataset.base+(active==='about'?'':'#'+active);
-    sectionLinks.forEach(a=>{const on=a.getAttribute('href')==='#'+active;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+    languageLink.href=languageLink.dataset.base+location.hash;
   }
+  window.addEventListener('hashchange',updateProgress);
   window.addEventListener('scroll',()=>{if(!progressQueued){progressQueued=true;requestAnimationFrame(updateProgress);}},{passive:true});
   updateProgress();
   if('IntersectionObserver' in window&&!reduced.matches){
@@ -49,13 +46,6 @@
     $$('.reveal').forEach(e=>{if(e.getBoundingClientRect().top>innerHeight+20)e.classList.add('reveal-ready');observer.observe(e);});
     reduced.addEventListener('change',event=>{if(event.matches){$$('.reveal').forEach(e=>e.classList.add('is-visible'));observer.disconnect();}});
   }
-  const orbit=$('.orbit-wrap');
-  let pointerQueued=false;
-  orbit.addEventListener('pointermove',event=>{
-    if(reduced.matches||event.pointerType!=='mouse'||pointerQueued)return;
-    pointerQueued=true;const {clientX,clientY}=event;
-    requestAnimationFrame(()=>{pointerQueued=false;const r=orbit.getBoundingClientRect();orbit.style.setProperty('--mx',`${(clientX-r.left)/r.width*100}%`);orbit.style.setProperty('--my',`${(clientY-r.top)/r.height*100}%`);});
-  });
   const filterButtons=$$('[data-filter]'), publications=$$('[data-category]');
   filterButtons.forEach(button=>button.addEventListener('click',()=>{
     const filter=button.dataset.filter;
@@ -67,9 +57,11 @@
   }));
   const video=$('#research-video');
   // Playback is opt-in; don't keep a background or off-screen video running.
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)video.pause();});
-  if('IntersectionObserver' in window)new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)video.pause();},{threshold:0}).observe(video);
-  const citations=JSON.parse($('#citation-data').textContent);
+  if(video){
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)video.pause();});
+    if('IntersectionObserver' in window)new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)video.pause();},{threshold:0}).observe(video);
+  }
+  const citations=JSON.parse($('#citation-data')?.textContent||'[]');
   const dialog=$('#citation-dialog');
   let citationTrigger;
   $$('[data-cite]').forEach(button=>button.addEventListener('click',()=>{
@@ -78,13 +70,13 @@
     $('#citation-note').textContent=citation.id==='merl'?ui.arxivNote:ui.journalNote;
     $('#copy-status').textContent='';dialog.showModal();$('#close-citation').focus();
   }));
-  $('#close-citation').addEventListener('click',()=>dialog.close());
-  dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
-  dialog.addEventListener('close',()=>citationTrigger?.focus({preventScroll:true}));
+  $('#close-citation')?.addEventListener('click',()=>dialog.close());
+  dialog?.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+  dialog?.addEventListener('close',()=>citationTrigger?.focus({preventScroll:true}));
   async function copyText(text){
     if(navigator.clipboard?.writeText){try{await navigator.clipboard.writeText(text);return true;}catch{}}
-    const area=document.createElement('textarea');area.value=text;area.style.cssText='position:fixed;left:-9999px;top:0';(dialog.open?dialog:document.body).append(area);area.select();let success=false;try{success=document.execCommand('copy');}catch{}area.remove();return success;
+    const area=document.createElement('textarea');area.value=text;area.style.cssText='position:fixed;left:-9999px;top:0';(dialog?.open?dialog:document.body).append(area);area.select();let success=false;try{success=document.execCommand('copy');}catch{}area.remove();return success;
   }
-  $('#copy-citation').addEventListener('click',async()=>{$('#copy-status').textContent=await copyText($('#citation-code').textContent)?ui.copiedBib:ui.manualBib;});
-  $('#copy-email').addEventListener('click',async event=>{const button=event.currentTarget;const success=await copyText(button.dataset.email);announce(success?ui.copiedEmail:`${ui.emailLabel}: ${button.dataset.email}`);button.innerHTML=success?ui.emailCopied:ui.manualEmail;});
+  $('#copy-citation')?.addEventListener('click',async()=>{$('#copy-status').textContent=await copyText($('#citation-code').textContent)?ui.copiedBib:ui.manualBib;});
+  $('#copy-email')?.addEventListener('click',async event=>{const button=event.currentTarget;const success=await copyText(button.dataset.email);announce(success?ui.copiedEmail:`${ui.emailLabel}: ${button.dataset.email}`);button.innerHTML=success?ui.emailCopied:ui.manualEmail;});
 })();

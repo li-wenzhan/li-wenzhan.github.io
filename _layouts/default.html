@@ -21,24 +21,22 @@
   <link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/global.css">
   <script src="assets/js/main.js" defer></script>
+  <noscript><style>.pub-filters,.cite-button,#copy-email,.theme-toggle{display:none}@media(max-width:640px){.nav-wrap{height:auto;min-height:61px;flex-wrap:wrap;padding-block:12px;gap:8px}.nav-tools{margin-left:auto}.main-nav{display:flex;position:static;order:3;flex-direction:row;flex-wrap:wrap;width:100%;padding:0;gap:4px 20px;border:0;box-shadow:none;background:none}.main-nav>a{padding:5px 0;font-size:11px}.main-nav>a.active::after{display:none}.menu-toggle{display:none}.site-header{position:static}}</style></noscript>
   <script type="application/ld+json">{{schema}}</script>
 </head>
-<body>
+<body id="top" data-page="{{page}}">
   <a class="skip-link" href="#main">{{skip}}</a>
   {{icons}}
   <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="#about" aria-label="Wenzhan Li, home"><span class="monogram">w<span>l</span><i>.</i></span><span class="brand-name">Wenzhan Li</span></a>
-      <nav class="main-nav" id="main-nav" aria-label="{{navigationLabel}}">
-        <a href="#about" class="active">{{about}}</a><a href="#publications">{{researchNav}}</a><a href="#experience">{{experienceNav}}</a><a href="#contact">{{contactNav}}</a>
-        <a class="nav-cv" href="{{cv}}" title="{{cvDate}}" target="_blank" rel="noopener">{{cvNav}} {{arrow}}</a>
-      </nav>
+    <div class="nav-wrap wrap">
+      <a class="brand" href="{{homeHref}}" aria-label="Wenzhan Li, home"><span class="monogram">w<span>l</span><i>.</i></span><span class="brand-name">Wenzhan Li</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="{{navigationLabel}}">{{navigation}}<a class="nav-cv" href="{{cv}}" title="{{cvDate}}" target="_blank" rel="noopener">{{cvNav}} {{arrow}}</a></nav>
       <div class="nav-tools"><a class="language-switch" data-language data-base="{{languageHref}}" href="{{languageHref}}" hreflang="{{otherLang}}" aria-label="{{languageLabel}}">{{language}}</a><button class="theme-toggle" id="theme-toggle" aria-label="{{themeToDark}}" title="{{themeToDark}}">{{themeIcon}}</button><button class="menu-toggle" id="menu-toggle" aria-label="{{openMenu}}" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button></div>
     </div>
     <div class="reading-progress" aria-hidden="true"></div>
   </header>
-  <main id="main">{{main}}</main>
-  <footer class="site-footer wrap"><div><span class="footer-mark">Wenzhan Li</span><span>{{footer}}</span></div><div><span>{{updatedPrefix}} {{updated}}</span><a href="https://github.com/li-wenzhan/li-wenzhan.github.io" target="_blank" rel="noopener">{{source}} {{arrow}}</a><a href="#about" class="back-top">{{backTop}}</a></div></footer>
+  <div class="academic-layout wrap">{{sidebar}}<main class="page-content" id="main" tabindex="-1">{{main}}</main></div>
+  <footer class="site-footer wrap"><div><span class="footer-mark">Wenzhan Li</span><span>{{footer}}</span></div><div><span>{{updatedPrefix}} {{updated}}</span><a href="https://github.com/li-wenzhan/li-wenzhan.github.io" target="_blank" rel="noopener">{{source}} {{arrow}}</a><a href="#top" class="back-top">{{backTop}}</a></div></footer>
   {{dialog}}
   <div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
 </body>

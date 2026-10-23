@@ -8,7 +8,7 @@ The design combines warm paper tones, forest-green ink, editorial typography,
 real research figures, a personal portrait, and restrained interactions.
 
 English is the default at `/`; the complete Chinese edition lives at `/zh/`.
-The language control preserves the current section. Paper titles, author lists,
+The language control preserves the current page and fragment. Paper titles, author lists,
 and BibTeX retain their official bibliographic form in both editions.
 
 ## Preview and publish
@@ -21,7 +21,7 @@ npm run dev
 # Open http://127.0.0.1:4179
 ```
 
-`npm run build` generates the root HTML and `dist/`, and verifies local assets,
+`npm run build` generates eight static pages and `dist/`, and verifies local assets,
 publication data, font files, JavaScript, and disclosure boundaries. A push to
 `main` deploys `dist/` using GitHub Actions. The site is served at the root of
 `li-wenzhan.github.io`; no `/academic-homepage/` prefix is used.
@@ -30,11 +30,12 @@ publication data, font files, JavaScript, and disclosure boundaries. A push to
 
 | What to update | Where |
 | --- | --- |
-| Biography, contact details, status | `_data/profile.json` |
-| Chinese content overrides | `_data/profile.zh.json` |
-| English/Chinese interface labels | `_data/i18n.json` |
-| Dated news | `news` array, newest first |
+| Biography, contact details, status | [`_data/profile.json`](_data/profile.json) |
+| Chinese content overrides | [`_data/profile.zh.json`](_data/profile.zh.json) |
+| English/Chinese interface labels | [`_data/i18n.json`](_data/i18n.json) |
+| Dated news | `news` array; automatically sorted newest first at build time |
 | Papers and contribution statements | `publications` array |
+| Honors and awards (currently hidden) | [`_data/honors.json`](_data/honors.json); empty lists render no section |
 | Education and employment | `education`, `experience`, `appointment` |
 | Research directions | `research`, `collaboration`, `future` |
 | CV PDF | `assets/documents/Wenzhan_Li_CV.pdf`; update `cvDate` |
@@ -44,6 +45,9 @@ publication data, font files, JavaScript, and disclosure boundaries. A push to
 | Filters, citations, theme and navigation | `assets/js/main.js` |
 
 After changing the data, run `npm run build` and commit the regenerated HTML.
+Edit the data files rather than generated HTML so future builds preserve updates.
+See the [Chinese content editing guide](docs/EDITING.md) for News, dates, and the
+reserved honors section.
 Set `updated` and `updatedLabel` when making a substantive content update.
 New publications should include the full verified author list, equal-contribution
 markers, publication status, links, a thumbnail with alt text, and a concise
@@ -58,12 +62,16 @@ the self-hosted Noto font subsets (requires `fonttools[woff]` and network access
 ## Interaction and accessibility
 
 - Publication filters with accessible result announcements.
+- About, Publications, Experience, and Research pages with a consistent profile sidebar.
+- News in reverse chronological order, with a keyboard-accessible scroll area.
+- Institution logos alongside education, research appointments, and industry roles.
+- DADA's WPBP @ ICRA 2026 oral extended abstract grouped with its RA-L paper.
 - Complete English/Chinese pages with reciprocal `hreflang` metadata.
 - Native contribution disclosures and paper/video controls.
 - Citation dialogs with keyboard dismissal and clipboard fallback.
 - Light/dark themes with a saved preference.
-- Mobile navigation, active section markers, and a reading progress line.
-- Gentle scroll reveals and pointer response; reduced-motion support.
+- Mobile navigation, active page markers, and a reading progress line.
+- Gentle scroll reveals and image hover response; reduced-motion support.
 - Complete server-rendered content with local fonts and no tracking scripts.
 
 ## Provenance and attribution
